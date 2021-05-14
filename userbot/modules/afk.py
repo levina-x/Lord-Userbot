@@ -134,7 +134,7 @@ async def mention_afk(mention):
     user = await bot.get_me()  # pylint:disable=E0602
     back_alivee = datetime.now()
     afk_end = back_alivee.replace(microsecond=0)
-    afk_since = "**Terakhir Aktif**"
+    afk_since = "**terakhir aktif**"
     if mention.message.mentioned and not (await mention.get_sender()).bot:
         if ISAFK:
             now = datetime.now()
@@ -148,7 +148,7 @@ async def mention_afk(mention):
             time %= 60
             seconds = time
             if days == 1:
-                afk_since = "**Kemarin**"
+                afk_since = "**kemarin**"
             elif days > 1:
                 if days > 6:
                     date = now + \
@@ -225,7 +225,7 @@ async def afk_on_pm(sender):
             time %= 60
             seconds = time
             if days == 1:
-                afk_since = "**Kemarin**"
+                afk_since = "**kemarin**"
             elif days > 1:
                 if days > 6:
                     date = now + \
